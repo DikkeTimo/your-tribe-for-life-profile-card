@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
   /** @type {import("@prismicio/client").Content.NamePfSlice} */
   export let slice;
 </script>
@@ -9,9 +9,9 @@
 >
   Placeholder component for {slice.slice_type} (variation: {slice.variation})
   Slices
-</section> -->
+</section>
 
-<script>
+<!-- <script>
   /** @type {import("@prismicio/client").Content.NaamSlice} */
 
   export let slice;
@@ -21,7 +21,7 @@
   {#each slice.primary.name as item}
     <p>{item.text}</p>
   {/each}
-</section>
+</section> -->
 
 <!-- <pre>
 	{JSON.stringify(slice, null, 2)}

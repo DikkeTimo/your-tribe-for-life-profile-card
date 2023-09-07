@@ -15,7 +15,6 @@
 				]
 			},
 			"timpf": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
@@ -33,7 +32,32 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"lastename": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolor commodo voluptate ex consectetur. Enim dolore dolore consequat deserunt et adipisicing deserunt. Do magna nulla cupidatat enim consequat mollit voluptate deserunt cupidatat deserunt magna voluptate."
+						}
+					}
+				]
+			},
+			"gamename": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Cillum esse cupidatat in. Nisi incididunt duis est sunt pariatur veniam magna ex dolor id laboris adipisicing elit. Nostrud ea amet Lorem anim aute in id ullamco eu id."
+						}
+					}
+				]
 			}
 		},
 		"items": []

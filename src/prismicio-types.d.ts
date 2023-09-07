@@ -87,6 +87,26 @@ export interface NamePfSliceDefaultPrimary {
   name: prismic.RichTextField;
 
   /**
+   * lastename field in *NamePf → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: name_pf.primary.lastename
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  lastename: prismic.RichTextField;
+
+  /**
+   * gamename field in *NamePf → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: name_pf.primary.gamename
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  gamename: prismic.RichTextField;
+
+  /**
    * Timpf field in *NamePf → Primary*
    *
    * - **Field Type**: Image
