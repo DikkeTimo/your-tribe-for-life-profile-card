@@ -73,6 +73,63 @@ export type ProfilecardDocument<Lang extends string = string> =
 export type AllDocumentTypes = ProfilecardDocument;
 
 /**
+ * Default variation for Member Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Member*
+ */
+type MemberSliceVariation = MemberSliceDefault;
+
+/**
+ * Member Shared Slice
+ *
+ * - **API ID**: `member`
+ * - **Description**: Member
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberSlice = prismic.SharedSlice<"member", MemberSliceVariation>;
+
+/**
+ * Default variation for Members Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Members*
+ */
+type MembersSliceVariation = MembersSliceDefault;
+
+/**
+ * Members Shared Slice
+ *
+ * - **API ID**: `members`
+ * - **Description**: Members
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSlice = prismic.SharedSlice<
+  "members",
+  MembersSliceVariation
+>;
+
+/**
  * Primary content in *NamePf → Primary*
  */
 export interface NamePfSliceDefaultPrimary {
@@ -115,6 +172,16 @@ export interface NamePfSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   timpf: prismic.ImageField<never>;
+
+  /**
+   * about field in *NamePf → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: name_pf.primary.about
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  about: prismic.KeyTextField;
 }
 
 /**
@@ -158,6 +225,12 @@ declare module "@prismicio/client" {
       ProfilecardDocumentData,
       ProfilecardDocumentDataSlicesSlice,
       AllDocumentTypes,
+      MemberSlice,
+      MemberSliceVariation,
+      MemberSliceDefault,
+      MembersSlice,
+      MembersSliceVariation,
+      MembersSliceDefault,
       NamePfSlice,
       NamePfSliceDefaultPrimary,
       NamePfSliceVariation,

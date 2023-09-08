@@ -58,6 +58,11 @@
 						}
 					}
 				]
+			},
+			"about": {
+				"__TYPE__": "FieldContent",
+				"value": "ran",
+				"type": "Text"
 			}
 		},
 		"items": []
