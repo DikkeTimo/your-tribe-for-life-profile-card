@@ -35,8 +35,13 @@
   </div>
   <div class="info">
     <div class="about_me">
-      <h3>About <span>Me</span></h3>
-      <p>{data.slices[0].primary.about}</p>
+      <div class="story">
+        <h3>About <span>Me</span></h3>
+        <p>{data.slices[0].primary.about}</p>
+      </div>
+      <div class="age">
+        <p>Age <span /></p>
+      </div>
     </div>
   </div>
 </div>
@@ -106,8 +111,14 @@
     border-radius: var(--borderr);
     width: 100%;
     padding: 5rem;
+    overflow-y: scroll;
 
     & .about_me {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & .story {
       width: 20vw;
       & h3 {
         font-size: var(--fontsize);
@@ -119,5 +130,10 @@
         margin-top: 4rem;
       }
     }
+
+    & .age {
+      width: 20vw;
+    }
   }
 </style>
+
