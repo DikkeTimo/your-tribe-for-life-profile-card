@@ -49,8 +49,8 @@ Je kan doormiddel van een visitekaartje informatie over mij vinden.
 
 ## 📖 Bronnen
 
-- [SvelteKit]([https://nodejs.org/en/](https://kit.svelte.dev/docs/introduction))
-- [Prismic]([https://ejs.co/](https://prismic.io/docs))
+- [SvelteKit]([https://nodejs.org/en/](https://kit.svelte.dev/docs/introduction)
+- [Prismic]([https://ejs.co/](https://prismic.io/docs)
 - [MDN](https://developer.mozilla.org/en-US/)
 - [YouTube](https://www.youtube.com/)
 
