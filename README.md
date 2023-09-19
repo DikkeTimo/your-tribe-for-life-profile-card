@@ -10,6 +10,9 @@
 
 Voor deze leertaak heb ik een visitekaartje gemaakt met sveltekit en prismic, de informatie op het visitekaartje komt uit prismic.
 
+![Surface Laptop Studio](https://github.com/DikkeTimo/your-tribe-for-life-profile-card/assets/62908209/c2485e53-c5c5-46ec-922b-a8bc3e680865)
+
+
 
 ## Inhoudsopgave
   * [Kenmerken](#kenmerken)
