@@ -185,6 +185,22 @@ export interface NamePfSliceDefaultPrimary {
 }
 
 /**
+ * Primary content in *NamePf → Items*
+ */
+export interface NamePfSliceDefaultItem {
+  /**
+   * info field in *NamePf → Items*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: name_pf.items[].info
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  info: prismic.BooleanField;
+}
+
+/**
  * Default variation for NamePf Slice
  *
  * - **API ID**: `default`
@@ -194,7 +210,7 @@ export interface NamePfSliceDefaultPrimary {
 export type NamePfSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<NamePfSliceDefaultPrimary>,
-  never
+  Simplify<NamePfSliceDefaultItem>
 >;
 
 /**
@@ -233,6 +249,7 @@ declare module "@prismicio/client" {
       MembersSliceDefault,
       NamePfSlice,
       NamePfSliceDefaultPrimary,
+      NamePfSliceDefaultItem,
       NamePfSliceVariation,
       NamePfSliceDefault,
     };

@@ -39,8 +39,14 @@
         <h3>About <span>Me</span></h3>
         <p>{data.slices[0].primary.about}</p>
       </div>
-      <div class="age">
-        <p>Age <span /></p>
+      <div class="story">
+        <h3>Contact <span>Me</span></h3>
+        <ul>
+          <li>Tim Oosterveer</li>
+          <li>23</li>
+          <li>Lisserbroek</li>
+          <li><a href="https://github.com/DikkeTimo" target="_blank">Github</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -126,8 +132,29 @@
       & span {
         color: var(--textcolor2);
       }
-      & p {
+      & p,
+      ul {
         margin-top: 4rem;
+      }
+
+      & ul {
+        list-style: none;
+      }
+
+      & li {
+        border-bottom: 1px solid white;
+        width: 45%;
+      }
+
+      & li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      & a:hover {
+        text-decoration: solid;
+        color: #06b4e0;
+        text-decoration: underline;
       }
     }
 
@@ -135,5 +162,37 @@
       width: 20vw;
     }
   }
-</style>
 
+  @media (max-width: 1051px) {
+      
+      .card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .personal_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+      }
+    }
+
+
+    @media (max-width: 515px) { 
+      .about_me {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+      }
+
+      .story {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      h3, p {
+        width: 200px;
+      }
+    }
+</style>

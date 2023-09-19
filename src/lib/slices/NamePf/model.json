@@ -55,7 +55,17 @@
           }
         }
       },
-      "items": {}
+      "items": {
+        "info": {
+          "type": "Boolean",
+          "config": {
+            "label": "info",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        }
+      }
     }
   ]
 }
