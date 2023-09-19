@@ -48,12 +48,12 @@
     <div class="about_me">
       <div class="story">
         <h3 transition:fade={{ delay: 250, duration: 300, axis: 'x' }}>About <span>Me</span></h3>
-        <p transition:fade={{ delay: 1500, duration: 1000 }}>{data.slices[0].primary.about}</p>
+        <p transition:fade={{ delay: 1000, duration: 1000 }}>{data.slices[0].primary.about}</p>
       </div>
       <div class="story">
         <h3 transition:fade={{ delay: 250, duration: 300, axis: 'x' }}>Contact <span>Me</span></h3>
         <ul>
-          <li transition:fade={{ delay: 250, duration: 500, axis: 'x' }}>Tim Oosterveer</li>
+          <li transition:fade={{ delay: 350, duration: 500, axis: 'x' }}>Tim Oosterveer</li>
           <li transition:fade={{ delay: 550, duration: 500, axis: 'x' }}>23</li>
           <li transition:fade={{ delay: 750, duration: 500, axis: 'x' }}>Lisserbroek</li>
           <li transition:fade={{ delay: 950, duration: 500, axis: 'x' }}><a href="https://github.com/DikkeTimo" target="_blank">Github</a></li>
