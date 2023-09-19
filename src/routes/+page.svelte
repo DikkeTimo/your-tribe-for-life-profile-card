@@ -1,10 +1,20 @@
 <script>
   import { SliceZone } from "@prismicio/svelte";
   import { components } from "$lib/slices";
-  export let data;
-  // /** @type {import("@prismicio/client").Content.NamePfSlice} */
-
   import { PrismicImage } from "@prismicio/svelte";
+  import {fade, fly, blur, scale} from 'svelte/transition'
+  
+  import {onMount} from 'svelte'
+  
+  export let data;
+
+  let showing = false 
+
+  onMount(() => {
+    showing = true
+  });
+
+
 </script>
 
 <SliceZone slices={data.document} {components} />
@@ -19,13 +29,14 @@
   {/each}
 {/each} -->
 
+{#if showing}
 <div class="card">
   <div class="personal_info">
     <div class="picture">
-      <img src={data.slices[0].primary.timpf.url} alt="Image Alt Text" />
+      <img transition:fade={{ duration: 1000 }} src={data.slices[0].primary.timpf.url} alt="Image Alt Text" />
     </div>
     <div class="name">
-      <h1>
+      <h1 transition:scale={{ duration: 1000, delay: 500, opacity: 0, start: 0.5 }}>
         {data.slices[0].primary.name[0].text}
         {data.slices[0].primary.lastename[0].text}
       </h1>
@@ -36,21 +47,22 @@
   <div class="info">
     <div class="about_me">
       <div class="story">
-        <h3>About <span>Me</span></h3>
-        <p>{data.slices[0].primary.about}</p>
+        <h3 transition:fade={{ delay: 250, duration: 300, axis: 'x' }}>About <span>Me</span></h3>
+        <p transition:fade={{ delay: 1500, duration: 1000 }}>{data.slices[0].primary.about}</p>
       </div>
       <div class="story">
-        <h3>Contact <span>Me</span></h3>
+        <h3 transition:fade={{ delay: 250, duration: 300, axis: 'x' }}>Contact <span>Me</span></h3>
         <ul>
-          <li>Tim Oosterveer</li>
-          <li>23</li>
-          <li>Lisserbroek</li>
-          <li><a href="https://github.com/DikkeTimo" target="_blank">Github</a></li>
+          <li transition:fade={{ delay: 250, duration: 500, axis: 'x' }}>Tim Oosterveer</li>
+          <li transition:fade={{ delay: 550, duration: 500, axis: 'x' }}>23</li>
+          <li transition:fade={{ delay: 750, duration: 500, axis: 'x' }}>Lisserbroek</li>
+          <li transition:fade={{ delay: 950, duration: 500, axis: 'x' }}><a href="https://github.com/DikkeTimo" target="_blank">Github</a></li>
         </ul>
       </div>
     </div>
   </div>
 </div>
+{/if}
 
 <!-- <pre>
 	{JSON.stringify(data, null, 2)}
